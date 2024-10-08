@@ -67,7 +67,7 @@
     add the universal CSS selector to the styles below
 */
 /* ----- */
-{
+* {
     font-family: var(--fonts);
     line-height: 1.3;
     color: var(--dk-gray);
@@ -80,7 +80,7 @@
     select the body by its tag name
 */
 /* ----- */
-{
+body {
     box-sizing: border-box;
     background-color: var(--lt-gray);
 }
@@ -94,7 +94,7 @@
     select the header and footer by tag name
 */
 /* ----- */
-{
+header, footer {
     padding: 2rem 1rem;
     background-color: var(--white);
     width: 100%;
@@ -111,7 +111,7 @@
     select the header only, by tag name
 */
 /* ----- */
-{
+header {
     margin: 0 auto 2rem auto;
 }
 
@@ -124,7 +124,7 @@
     select the h1 tag by tag name
 */
 /* ----- */
-{
+h1 {
     font-size: 2em;
     margin: 0;
     text-align: center;
@@ -136,7 +136,7 @@
     select both the h1 and h2 tags on the page by tag name
 */
 /* ----- */
-{
+h1, h2 {
     grid-column: 1/-1;
     text-align: center;
     font-weight: bold;
@@ -149,7 +149,7 @@
     select the h2 tags by tag name
 */
 /* ----- */
-{
+h2 {
     font-size: 1.75rem;
     margin: 0.25rem;
 }
@@ -160,7 +160,7 @@
     select the h3 tags by tag name
 */
 /* ----- */
-{
+h3 {
     font-size: 1.5rem;
     margin: 0.25rem;
 }
@@ -174,7 +174,7 @@
     select all of the unordered lists on the page using the tag name selector
 */
 /* ----- */
-{
+ul {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 12px;
@@ -189,7 +189,7 @@
     select all of the links on the page using the tag name selector
 */
 /* ----- */
-{
+a {
     color: var(--blue);
 }
 
@@ -199,7 +199,7 @@
     select the links on the page when a user hovers over them using the tag name and pseudo-class  selector
 */
 /* ----- */
-{
+a:hover {
     text-decoration: none;
 }
 
@@ -209,7 +209,7 @@
     select the links on the page when they have keyboard focus using the tag name and pseudo-class  selector
 */
 /* ----- */
-{
+a:hover {
     text-decoration: none;
     outline: 4px solid var(--dv-med-blue);
     outline-offset: 2px;
@@ -224,7 +224,8 @@
     select the main element by tag name
 */
 /* ----- */
-{
+/* Main Styles */
+main {
     width: 100%;
     max-width: 1200px;
     margin: 2rem auto;
@@ -233,16 +234,8 @@
     grid-gap: 1rem;
 }
 
-/* --------------- */
-/* MAIN SECTION STYLES */
-/* --------------- */
-/* ----- */
-/* 
-    TO DO:
-    select the sections on the page that are direct descendants to the main by tag names and using the direct descendant selector
-*/
-/* ----- */
-{
+/* Main Section Styles */
+main > section {
     display: block;
     width: calc(100% - 2rem);
     max-width: calc(500px - 2rem);
@@ -253,233 +246,36 @@
     box-shadow: var(--box-shadow-sm);
 }
 
-/* --------------- */
-/* PARAGRAPH STYLES */
-/* --------------- */
-/* ----- */
-/* 
-TO DO:
-select the paragraph elements by tag name
-*/
-/* ----- */
-{
+/* Paragraph Styles */
+p {
     padding: 1rem; 
     font-size: 1.2rem;
     max-width: 65ch;
     margin: 0 auto;
 }
 
-/* --------------- */
-/* IMAGE STYLES */
-/* --------------- */
-/* ----- */
-/* 
-    TO DO:
-    select the images and SVGs by tag names
-*/
-/* ----- */
-{
+/* Image Styles */
+img, svg {
     display: block;
     width: 100%;
     height: auto;
 }
 
-/* --------------- */
-/* SPAN STYLES */
-/* --------------- */
-/* ----- */
-/* 
-TO DO:
-select all of the spans by tag name
-*/
-/* ----- */
-{
+/* Span Styles */
+span {
     display: block;
 }
 
-/* ------------------------------------ */
-/* STYLES BY SECTION IN MAIN */
-/* ------------------------------------ */
-/* --------------- */
-/* IMAGE STYLES SECTION CONTENT STYLES */
-/* --------------- */
-/* ----- */
-/* 
-    TO DO:
-    select the h2 in the first section using the ID, tag name, and child/descendant selectors
-*/
-/* ----- */
-{
-    padding: 12px 0;
-    background-color: var(--blue);
-    color: var(--white);
-}
-
-/* --------------- */
-/* NAVIGATION SECTION CONTENT STYLES */
-/* --------------- */
-/* ----- */
-/* 
-    TO DO:
-    select the h2 in the second section using the ID, tag name, and child/descendant selectors
-*/
-/* ----- */
-{
-    padding: 12px 0;
-    background-color: var(--green);
-    color: var(--white);
-}
-
-/* ----- */
-/* 
-    TO DO:
-    select the unordered list in the navigation using the tag names and child/descendant selector
-*/
-/* ----- */
-{
-    display: block;
-    list-style-type: none;
-    padding: 0;
-    text-align: center;
-}
-
-/* ----- */
-/* 
-    TO DO:
-    select the list items in the navigation using the tag names and child/descendant selector
-*/
-/* ----- */
-{
-    display: block;
-    width: 100%;
-}
-
-/* ----- */
-/* 
-    TO DO:
-    select the anchor tags in the navigation using the tag names and child/descendant selectors
-*/
-/* ----- */
-{
-    display: block;
-    width: 90%;
-    margin: 16px auto;
-    text-decoration: none;
-    text-align: center;
-    font-weight: bold;
-    padding: 16px;
-    font-size: 1.2rem;
-    background-color: var(--green);
-    color: var(--white);
-    box-shadow: var(--box-shadow-lg);
-    letter-spacing: 1px;
-}
-
-/* ----- */
-/* 
-    TO DO:
-    select the anchor tags in the navigation on hover using the tag names, pseudo-class, and child/descendant selectors
-*/
-/* ----- */
-{
-    background-color: var(--white);
-    color: var(--green);
-    box-shadow: var(--box-shadow-sm);
-}
-
-/* --------------- */
-/* FORM SECTION CONTENT STYLES */
-/* --------------- */
-/* ----- */
-/* 
-    TO DO:
-    select the h2 in the third section using the class name selector
-*/
-/* ----- */
-{
-    padding: 12px 0;
-    background-color: var(--dv-fuchsia);
-    color: var(--white);
-}
-
-/* ----- */
-/* 
-    TO DO:
-    select all of the inputs, labels, select dropdowns and text areas on the page by tag name
-*/
-/* ----- */
-{
-    display: block;
-    width: 95%;
-    margin: 0.5rem auto;
-    font-family: var(--fonts);
-    font-size: 1.1rem;
-}
-
-/* ----- */
-/* 
-    TO DO:      
-    select all of the inputs and selects by tag name
-*/
-/* ----- */
-{
-    height: 2rem;
-    border: 2px solid var(--dk-gray);
-}
-
-/* ----- */
-/* 
-    TO DO:
-    select all of the inputs on focus (by tag name/pseudo-class) on the page
-*/
-/* ----- */
-{
-    outline: 4px solid var(--orange);
-    outline-offset: 2px;
-    border: none;
-}
-
-/* ----- */
-/* 
-    TO DO:
-    select all of the inputs on focus (by tag name/pseudo-class) on the page
-*/
-/* ----- */
-{
-    outline-color: var(--dv-dk-blue);
-}
-
-/* ----- */
-/* 
-    TO DO:
-    select the labels in the form using the tag name/element selector
-*/
-/* ----- */
-{
-    font-size: 1.25rem;
-    margin-top: 16px;
-}
-
-/* ----- */
-/* 
-    TO DO:
-    select the spans in the form using the class name selector
-*/
-/* ----- */
-{
+/* Spans in Form Section */
+.form-section span {
     font-size: 1.5rem;
     font-weight: bold;
     display: inline;
     color: var(--purple);
 }
 
-/* ----- */
-/* 
-    TO DO:
-    select all of the submit buttons (by tag name/type attribute) on the page
-*/
-/* ----- */
-{
+/* Submit Button Styles */
+input[type="submit"] {
     display: block;
     margin: 32px auto 16px;
     width: 100%;
@@ -496,198 +292,98 @@ select all of the spans by tag name
     box-shadow: var(--box-shadow-lg);
 }
 
-/* ----- */
-/* 
-    TO DO:
-    select all of the submit buttons on hover (by tag name/type attribute name) on the page
-*/
-/* ----- */
-{
+/* Submit Button Hover */
+input[type="submit"]:hover {
     box-shadow: var(--box-shadow-sm);
     color: var(--purple);
     background-color: var(--lt-gray);
 }
 
-/* ----- */
-/* 
-    TO DO:
-    select all of the submit buttons on focus (by tag name/type attribute/pseudo-class) on the page
-*/
-/* ----- */
-{
+/* Submit Button Focus */
+input[type="submit"]:focus {
     box-shadow: var(--box-shadow-sm);
     outline: 4px solid var(--dv-dk-blue);
     outline-offset: 1px;
 }
 
-/* --------------- */
-/* LIST STYLING SECTION CONTENT STYLES */
-/* --------------- */
-/* ----- */
-/* 
-    TO DO:
-    select the h2 in the list styling section using the class name selector
-*/
-/* ----- */
-{
+/* List Styling Section */
+.list-styling h2 {
     color: var(--blue);
 }
 
-/* ----- */
-/* 
-    TO DO:
-    select the unordered list in the list styling container using the id and tag name selectors
-*/
-/* ----- */
-{
+#list-styling ul {
     display: block;
     width: fit-content;
     margin: 32px auto;
 }
 
-/* ----- */
-/* 
-    TO DO:
-    select all of the list items in the list styling container using the ID and tag name selectors
-*/
-/* ----- */
-{
+#list-styling ul li {
     font-size: 1.25rem;
     line-height: 1.35;
     margin-bottom: 8px;
     color: var(--dv-pink);
 }
 
-/* ----- */
-/* 
-    TO DO:
-    select the bullets on the unordered list in the list styling section using the tag name and pseudo-class selectors
-*/
-/* ----- */
-{
+#list-styling ul li::marker {
     font-size: 3rem;
     content: "\2730";
 }
 
-/* ----- */
-/* 
-    TO DO:
-    select the first list item in the list styling container using the ID, tag name, and pseudo-class selectors
-*/
-/* ----- */
-{
+#list-styling ul li:first-child {
     color: var(--purple);
 }
 
-/* ----- */
-/* 
-    TO DO:
-    select the last list item in the list styling container using the ID, tag name, and pseudo-class selectors
-*/
-/* ----- */
-{
+#list-styling ul li:last-child {
     color: var(--dv-lt-blue);
 }
 
-/* --------------- */
-/* MORE STYLING SECTION CONTENT STYLES */
-/* --------------- */
-/* ----- */
-/* 
-    TO DO:
-    select all of the divs in the more styling section using the ID, descendant, and tag name selectors
-*/
-/* ----- */
-{
+/* More Styling Section */
+#more-styling div {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* ----- */
-/* 
-    TO DO:
-    select the first div in the more styling section using the ID, tag name and direct descendant selectors
-  */
-  /* ----- */
-{
+#more-styling div:first-of-type {
     width: 300px;
     height: 300px;
     background-color: var(--dv-red);
     margin: 16px auto;
 }
 
-/* ----- */
-/* 
-    TO DO:
-    select the second div in the more styling section using the ID, descendant, and tag name selectors
-*/
-/* ----- */
-{
+#more-styling div:nth-of-type(2) {
     width: 250px;
     height: 250px;
     background-color: var(--dv-orange);
 }
 
-/* ----- */
-/* 
-    TO DO:
-    select the third div in the more styling section using the ID, descendant, and class name selectors
-*/
-/* ----- */
-{
+#more-styling .specific-class-for-third-div {
     width: 200px;
     height: 200px;
     background-color: var(--dv-yellow);
 }
 
-/* ----- */
-/* 
-    TO DO:
-    select the fourth div in the pseudo-class styling section using the ID, tag name, descendant, and class selectors
-*/
-/* ----- */
-{
+#pseudo-class-styling .specific-class-for-fourth-div {
     width: 150px;
     height: 150px;
     background-color: var(--dv-mint);
 }
 
-/* ----- */
-/* 
-    TO DO:
-    select the last div in the more styling section using the ID, tag name, descendant, and class selectors
-*/
-/* ----- */
-{
+#more-styling .specific-class-for-last-div {
     width: 100px;
     height: 100px;
     background-color: var(--dv-lt-blue);
 }
 
-/* --------------- */
-/*  SOFTWARE LINKS (SECTION 6) CONTENT STYLES */
-/* --------------- */
-/* ----- */
-/* 
-    TO DO:
-    select the section with the ID of software by its ID 
-*/
-/* ----- */
-{
+/* Software Section */
+#software {
     margin-top: 16px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 12px;
 }
 
-/* ----- */
-/* 
-    TO DO:
-    select the links in the software section using the ID, tag name, and child/descendant selector
-*/
-/* ----- */
-{
+#software a {
     width: 100px;
     height: auto;
     margin: 0 auto;
@@ -696,211 +392,97 @@ select all of the spans by tag name
     box-shadow: var(--box-shadow-lg);
 }
 
-/* ----- */
-/* 
-    TO DO:
-    select the links in the software section on hover using the ID, tag name, child/descendant selector, and pseudo-class selector
-*/
-/* ----- */
-{
+#software a:hover {
     background-color: var(--dk-gray);
     box-shadow: var(--box-shadow-sm);
 }
 
-/* ----- */
-/* 
-    TO DO:
-    select the SVGs in the software section using the ID, tag name, and descendant selectors
-*/
-/* ----- */
-{
+#software svg {
     stroke: var(--dk-gray);
 }
 
-/* ----- */
-/* 
-    COMPLETED FOR YOU:
-    this code changes the color of the SVG stroke when the user hovers over the link they are inside of in the software section
-*/
-/* ----- */
-#software a:hover svg{
+#software a:hover svg {
     stroke: var(--dv-lime);
 }
 
-/* --------------- */
-/*  TABLE STYLING (SECTION 7) CONTENT STYLES */
-/* --------------- */
-/* ----- */
-/* 
-    TO DO:
-    select the table in the table styles section using the element/tag name selector
-*/
-/* ----- */
-{ 
+/* Table Styling Section */
+#table-styling table {
     border-collapse: collapse;
     width: 100%;
 }
 
-/* ----- */
-/* 
-    TO DO:
-    select the caption in the table styles section using the element/tag name selector
-*/
-/* ----- */
-{ 
+#table-styling caption {
     font-weight: bold;
     font-size: 1.25rem;
     margin-bottom: 8px;
 }
 
-/* ----- */
-/* 
-    TO DO:
-    select the table header cells in the table styles section using the element/tag name, descendant, and ID selectors
-*/
-/* ----- */
-{ 
+#table-styling th {
     background-color: var(--blue);
     color: var(--white);
 }
 
-/* ----- */
-/* 
-    TO DO:
-    select the odd table rows in the table body of the table styles section using the element/tag name and the pseudo-class selectors
-*/
-/* ----- */
-{ 
+#table-styling tbody tr:nth-child(odd) {
     background-color: var(--dv-orange);
 }
 
-/* ----- */
-/* 
-    TO DO:
-    select the first column in the table body of the table styles section using the element/tag name and the pseudo-class selectors
-*/
-/* ----- */
-{ 
+#table-styling td:first-child {
     font-weight: bold;
 }
 
-/* ----- */
-/* 
-    TO DO:
-    select the table heading cells (th) and the table data cells in the table styles section using the element/tag name and multiple element selectors
-*/
-/* ----- */
-{ 
+#table-styling th, #table-styling td {
     border: 1px solid var(--dk-gray);
     padding: 4px;
 }
 
-/* ----- */
-/* 
-    TO DO:
-    select the table footer in the table styles section using the element/tag name selector
-*/
-/* ----- */
-{ 
+#table-styling tfoot {
     font-weight: bold;
 }
 
-/* --------------- */
-/*  CSS BORDERS (SECTION 8) CONTENT STYLES */
-/* --------------- */
-/* ----- */
-/* 
-    TO DO:
-    select all of the divs in the border styling section using the ID, descendant, and tag name selectors
-*/
-/* ----- */
-{
+/* CSS Borders Section */
+#border-styling div {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* ----- */
-/* 
-    TO DO:
-    select the first div in the border styling section using the ID, tag name and direct descendant selectors
-  */
-  /* ----- */
-{
+#border-styling div:first-of-type {
     width: 300px;
     height: 300px;
     margin: 16px auto;
     border: 6px solid var(--red);
 }
 
-/* ----- */
-/* 
-    TO DO:
-    select the second div in the border styling section using the ID, descendant, and tag name selectors
-*/
-/* ----- */
-{
+#border-styling div:nth-of-type(2) {
     width: 250px;
     height: 250px;
     border: 6px dotted var(--dv-orange);
 }
 
-/* ----- */
-/* 
-    TO DO:
-    select the third div in the border styling section using the ID, descendant, and class name selectors
-*/
-/* ----- */
-{
+#border-styling .specific-class-for-third-div {
     width: 200px;
     height: 200px;
     border: 6px dashed var(--dv-yellow);
 }
 
-/* ----- */
-/* 
-    TO DO:
-    select the fourth div in the pseudo-class styling section using the ID, tag name, descendant, and class selectors
-*/
-/* ----- */
-{
+#pseudo-class-styling .specific-class-for-fourth-div {
     width: 150px;
     height: 150px;
     border: 6px double var(--dv-mint);
 }
 
-/* ----- */
-/* 
-    TO DO:
-    select the last div in the more styling section using the ID, tag name, descendant, and class selectors
-*/
-/* ----- */
-{
+#more-styling .specific-class-for-last-div {
     width: 100px;
     height: 100px;
     border: 6px inset var(--dv-lt-blue);
 }
 
-/* --------------- */
-/*  PSEUDO-ELEMENTS(SECTION 9) CONTENT STYLES */
-/* --------------- */
-/* ----- */
-/* 
-    TO DO:
-    select the pseudo-elements section using the ID selector
-*/
-/* ----- */
-{
+/* Pseudo-Elements Section */
+#pseudo-elements {
     position: relative;
 }
 
-/* ----- */
-/* 
-    TO DO:
-    select the div in the pseudo-elements section using the ID, child/descendant, and tag name selectors
-*/
-/* ----- */
-{
+#pseudo-elements div {
     width: 275px;
     height: 275px;
     margin: 56px auto 32px;
@@ -909,13 +491,7 @@ select all of the spans by tag name
     z-index: 0;
 }
 
-/* ----- */
-/* 
-    TO DO:
-    select the div's before element in the pseudo-elements section using the ID, child/descendant, pseudo-element, and tag name selectors
-*/
-/* ----- */
-{
+#pseudo-elements div::before {
     content: "\2730";
     padding: 12px 24px;
     border-radius: 50%;
@@ -929,13 +505,7 @@ select all of the spans by tag name
     z-index: -1;
 }
 
-/* ----- */
-/* 
-    TO DO:
-    select the image in the pseudo-elements section using the ID, child/descendant, and tag name selectors
-*/
-/* ----- */
-{
+#pseudo-elements img {
     width: 200px;
     height: 200px;
     margin: 0 auto;
@@ -944,16 +514,9 @@ select all of the spans by tag name
     z-index: 0;
 }
 
-/* ------------------------------------ */
-/* FOOTER STYLES */
-/* ------------------------------------ */
-/* ----- */
-/* 
-    TO DO:
-    select the footer element by tag name
-*/
-/* ----- */
-{
+/* Footer Styles */
+footer {
     margin: 2rem auto 0 auto;
     text-align: center;
 }
+
